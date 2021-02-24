@@ -6,7 +6,7 @@ from django.db import models
 class Costumers(models.Model):
     name = models.CharField(max_length=30)
     address = models.CharField(max_length=50)
-    mail = models.EmailField()
+    mail = models.EmailField(blank=True, null=True)
     phone = models.CharField(max_length=10)
 
     def __str__(self):
